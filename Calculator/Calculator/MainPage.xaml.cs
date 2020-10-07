@@ -18,6 +18,10 @@ namespace Calculator
         private void onNumberButtonClicked(object sender, EventArgs args)
         {
             Button button = (Button)sender;
+            if (inputEditor.Text == "0")
+            {
+                inputEditor.Text = button.Text;
+            }
             inputEditor.Text += button.Text;
         }
 
