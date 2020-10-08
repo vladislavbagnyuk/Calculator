@@ -4,12 +4,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Calculator
 {
     public partial class MainPage : ContentPage
     {
+
         public MainPage()
         {
             InitializeComponent();
@@ -37,6 +39,11 @@ namespace Calculator
                 s = "0";
             }
             inputEditor.Text = s;
+        }
+
+        private void onBackspaceLongPress()
+        {
+            inputEditor.Text = "0";
         }
     }
 }
