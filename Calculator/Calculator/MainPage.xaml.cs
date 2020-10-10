@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,7 +70,8 @@ namespace Calculator
         {   
             try
             {
-                double result = Convert.ToDouble(new DataTable().Compute(inputEditor.Text, null));
+                decimal result = Convert.ToDecimal(new DataTable().Compute(inputEditor.Text, null));
+                Debug.WriteLine(result);
                 resultEditor.Text = result.ToString();
             } catch {
                 resultEditor.Text = "Syntax Error";
