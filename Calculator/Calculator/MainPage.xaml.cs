@@ -69,7 +69,7 @@ namespace Calculator
             try
             {
                 decimal result = Convert.ToDecimal(new DataTable().Compute(inputEditor.Text, null));
-                resultEditor.Text = result.ToString();
+                resultEditor.Text = Math.Round(result, 4).ToString();
             } catch {
                 resultEditor.Text = "Syntax Error";
             }
