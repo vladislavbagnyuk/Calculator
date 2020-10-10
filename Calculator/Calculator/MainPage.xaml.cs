@@ -31,16 +31,14 @@ namespace Calculator
         private void onSymbolButtonClicked(object sender, EventArgs args)
         {
             Button button = (Button)sender;
-            if (inputEditor.Text != "0")
+            
+            if (button.Text == ",")
             {
-                if (button.Text == ",")
-                {
-                    inputEditor.Text += ".";
-                }
-                else
-                {
-                    inputEditor.Text += button.Text;
-                }
+                inputEditor.Text += ".";
+            }
+            else
+            {
+                inputEditor.Text += button.Text;
             }
         }
 

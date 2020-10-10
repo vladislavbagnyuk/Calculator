@@ -90,7 +90,7 @@
         <Button
             Grid.Row="4"
             Grid.Column="0"
-            Clicked="onSymbolButtonClicked"
+            Clicked="onNumberButtonClicked"
             FontSize="26"
             Text="4" />
         <Button
@@ -98,7 +98,7 @@
             Grid.Row="4"
             Grid.Column="3"
             BackgroundColor="#48F082"
-            Clicked="onNumberButtonClicked"
+            Clicked="onSymbolButtonClicked"
             FontSize="30"
             Text="+"
             TextColor="white" />
