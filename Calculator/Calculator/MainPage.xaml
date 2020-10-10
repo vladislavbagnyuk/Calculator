@@ -26,33 +26,41 @@
             Grid.ColumnSpan="4"
             FontSize="35"
             Text="0" />
+        <controls:CustomEditor
+            x:Name="resultEditor"
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            FontSize="55" />
         <Button
             Grid.Row="2"
             Grid.Column="0"
+            Clicked="onNumberButtonClicked"
             FontSize="26"
-            Text="^" />
+            Text="(" />
         <Button
             Grid.Row="2"
             Grid.Column="1"
+            Clicked="onSymbolButtonClicked"
             FontSize="26"
-            Text="√" />
+            Text=")" />
         <Button
             Grid.Row="2"
             Grid.Column="2"
+            Clicked="onBackspaceButtonClicked"
             FontSize="26"
-            Text="%" />
+            Text="⌫" />
         <Button
             Grid.Row="2"
             Grid.Column="3"
-            effects:LongPressedEffect.Command="{Binding ShowAlertCommand}"
-            effects:LongPressedEffect.CommandParameter="{Binding .}"
-            Clicked="onBackspaceButtonClicked"
+            Clicked="onSymbolButtonClicked"
             FontSize="26"
-            Text="⌫">
-            <Button.Effects>
-                <effects:LongPressedEffect />
-            </Button.Effects>
-        </Button>
+            Text="*" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Clicked="onSymbolButtonClicked"
+            FontSize="26"
+            Text="/" />
         <Button
             Grid.Row="3"
             Grid.Column="0"
@@ -65,28 +73,27 @@
             Clicked="onNumberButtonClicked"
             FontSize="26"
             Text="8" />
-        <Button
-            Grid.Row="3"
-            Grid.Column="3"
-            FontSize="26"
-            Text="x" />
+
         <Button
             Grid.Row="3"
             Grid.Column="2"
             Clicked="onNumberButtonClicked"
             FontSize="26"
             Text="9" />
-        <Button
-            Grid.Row="4"
-            Grid.Column="3"
-            FontSize="26"
-            Text="/" />
+
         <Button
             Grid.Row="4"
             Grid.Column="0"
-            Clicked="onNumberButtonClicked"
+            Clicked="onSymbolButtonClicked"
             FontSize="26"
             Text="4" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Clicked="onNumberButtonClicked"
+            FontSize="26"
+            Text="+" />
+
         <Button
             Grid.Row="4"
             Grid.Column="1"
@@ -99,11 +106,6 @@
             Clicked="onNumberButtonClicked"
             FontSize="26"
             Text="6" />
-        <Button
-            Grid.Row="5"
-            Grid.Column="3"
-            FontSize="26"
-            Text="+" />
         <Button
             Grid.Row="5"
             Grid.Column="0"
@@ -123,8 +125,9 @@
             FontSize="26"
             Text="3" />
         <Button
-            Grid.Row="6"
+            Grid.Row="5"
             Grid.Column="3"
+            Clicked="onSymbolButtonClicked"
             FontSize="26"
             Text="-" />
         <Button
@@ -136,11 +139,19 @@
         <Button
             Grid.Row="6"
             Grid.Column="1"
+            Clicked="onSymbolButtonClicked"
             FontSize="26"
             Text="," />
         <Button
             Grid.Row="6"
             Grid.Column="2"
+            Clicked="onClearButtonClicked"
+            FontSize="26"
+            Text="C" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            Clicked="onResultButtonClicked"
             FontSize="26"
             Text="=" />
     </Grid>
