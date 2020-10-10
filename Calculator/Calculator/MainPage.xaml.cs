@@ -17,6 +17,8 @@ namespace Calculator
         public MainPage()
         {
             InitializeComponent();
+            // Fix BackgroundColor resizing images
+
         }
 
         private void onNumberButtonClicked(object sender, EventArgs args)

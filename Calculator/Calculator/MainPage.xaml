@@ -50,17 +50,23 @@
             FontSize="26"
             Text="⌫" />
         <Button
+            x:Name="multiplyButton"
             Grid.Row="2"
             Grid.Column="3"
+            BackgroundColor="#48F082"
             Clicked="onSymbolButtonClicked"
-            FontSize="26"
-            Text="*" />
+            FontSize="30"
+            Text="*"
+            TextColor="white" />
         <Button
+            x:Name="divideButton"
             Grid.Row="3"
             Grid.Column="3"
+            BackgroundColor="#48F082"
             Clicked="onSymbolButtonClicked"
-            FontSize="26"
-            Text="/" />
+            FontSize="30"
+            Text="/"
+            TextColor="white" />
         <Button
             Grid.Row="3"
             Grid.Column="0"
@@ -88,11 +94,14 @@
             FontSize="26"
             Text="4" />
         <Button
+            x:Name="plusButton"
             Grid.Row="4"
             Grid.Column="3"
+            BackgroundColor="#48F082"
             Clicked="onNumberButtonClicked"
-            FontSize="26"
-            Text="+" />
+            FontSize="30"
+            Text="+"
+            TextColor="white" />
 
         <Button
             Grid.Row="4"
@@ -125,11 +134,14 @@
             FontSize="26"
             Text="3" />
         <Button
+            x:Name="minusButton"
             Grid.Row="5"
             Grid.Column="3"
+            BackgroundColor="#48F082"
             Clicked="onSymbolButtonClicked"
-            FontSize="26"
-            Text="-" />
+            FontSize="30"
+            Text="-"
+            TextColor="white" />
         <Button
             Grid.Row="6"
             Grid.Column="0"
@@ -149,11 +161,14 @@
             FontSize="26"
             Text="C" />
         <Button
+            x:Name="equalsButton"
             Grid.Row="6"
             Grid.Column="3"
+            BackgroundColor="#48F082"
             Clicked="onResultButtonClicked"
-            FontSize="26"
-            Text="=" />
+            FontSize="30"
+            Text="="
+            TextColor="white" />
     </Grid>
 
 </ContentPage>
