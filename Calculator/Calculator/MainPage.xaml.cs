@@ -34,7 +34,14 @@ namespace Calculator
             Button button = (Button)sender;
             if (inputEditor.Text != "0")
             {
-                inputEditor.Text += button.Text;
+                if (button.Text == ",")
+                {
+                    inputEditor.Text += ".";
+                }
+                else
+                {
+                    inputEditor.Text += button.Text;
+                }
             }
         }
 
@@ -55,12 +62,18 @@ namespace Calculator
         private void onClearButtonClicked(object sender, EventArgs args)
         {
             inputEditor.Text = "0";
+            resultEditor.Text = "";
         }
 
         private void onResultButtonClicked(object sender, EventArgs args)
-        {
-            double result = Convert.ToDouble(new DataTable().Compute(inputEditor.Text, null));
-            resultEditor.Text = result.ToString();
+        {   
+            try
+            {
+                double result = Convert.ToDouble(new DataTable().Compute(inputEditor.Text, null));
+                resultEditor.Text = result.ToString();
+            } catch {
+                resultEditor.Text = "Syntax Error";
+            }
         }
     }
 }
