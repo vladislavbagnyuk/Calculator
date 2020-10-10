@@ -22,9 +22,13 @@ namespace Calculator
         private void onNumberButtonClicked(object sender, EventArgs args)
         {
             Button button = (Button)sender;
-            if (inputEditor.Text == "0")
+            if (inputEditor.Text == "0" || resultEditor.Text != "")
             {
                 inputEditor.Text = button.Text;
+                if (resultEditor.Text != "")
+                {
+                    resultEditor.Text = "";
+                }
             } else { 
                 inputEditor.Text += button.Text;
             }
@@ -71,7 +75,6 @@ namespace Calculator
             try
             {
                 decimal result = Convert.ToDecimal(new DataTable().Compute(inputEditor.Text, null));
-                Debug.WriteLine(result);
                 resultEditor.Text = result.ToString();
             } catch {
                 resultEditor.Text = "Syntax Error";
